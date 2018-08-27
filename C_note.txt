@@ -142,6 +142,41 @@ Seventh：基本类型：
 				
 				字符型————char，字符常量用单引号，不是双引号。
 						可移植性技巧：不要假设char类型默认为signed或unsigned。如果需要注意，要用signed char 或 unsigned char代替char。
+						转义序列：字符转义序列和数字转义序列。
+								字符转义：\a, \b, \f, \n, \r, \t, \v, \\, \?, \', \";
+								数字转义：八进制转义、十六进制转义。
+										\八进制数（无符号、最大值通常为377，不一定要用0开头）
+										\x十六进制数（无符号，x必须小写）
+										都要用单引号括起来，比如'\33' or '\x1B'
+										采用#define的方式给它们命名
+								字符处理函数：toupper 小写转换成大写，需要#include <ctype.h>
+								读/写字符：%c对单独字符进行读写，不会跳过空白字符。" %c"前面加个空格可以强制跳过空格。******有问题*******
+											可以用getchar()和putchar()来读取单独的字符。
+											例子：while (getchar() != '\n');
+												whlie ((ch == getchar()) == ' ');
+				sizeof运算符：
+					sizeof(类型名)，也可以应用于变量、常量、表达式。是一元运算符，优先级高于二元。
+					printf("Size of int: %lu\n", (unsigned long)sizeof(int));
+				类型转换：隐式转换和显示转换
+					隐式转换：常用算术转换和赋值中的转换
+						常用算术转换:
+							任一操作数的类型是浮点型的情况。如果一个操作数的类型是long double/double/float，另一个转long double/double/float。
+							两个操作数的类型都不是浮点型的情况。先进行整型提升，保证没有字符型或短整型，然后在int——unsigned int——long int——unsigned long int
+						赋值中的转换：右边转换成左边的类型，如果取值在变量类型范围之外，那么把值赋给一个较狭小类型的变量将会得到无意义的结果。
+					强制转换（显示）：(类型名) 表达式
+						(类型名)是一元运算符，优先级高于二元。
+						有时也用强制转换来避免溢出。
+							long int i;
+							int j = 1000;
+							i = (long int) j * j;
+							如果不加强制转换，溢出在"*"时就发生了。
+				类型定义：typedef int Bool;
+					可移植性技巧：为了更大的可移植性，可以考虑使用typedef定义新的整型名。但是在scanf和printf中却要更改转换说明。
+
+Eighth  数组：
+								
+										
+						
 						
 				
 							
