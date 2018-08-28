@@ -1,11 +1,20 @@
 /* Forth */ 
-# include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 main()
 {
 	int i, j, k;
 	float ii;
 	char ch1, ch2;
+	
+	printf("%d", EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
+	
+	int m[3][4] = { 1,1,1,1,
+					1,1,1,1,
+					1,1,1,1 };
+	
 	
 	
 	
