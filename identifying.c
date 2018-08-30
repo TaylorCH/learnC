@@ -2,14 +2,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void iii(int a[])
+{	
+	int t;
+	t = a[0];
+	a[0] = a[1];
+	a[1] = t;
+}
+
 main()
 {
 	int i, j, k;
 	float ii;
 	char ch1, ch2;
 	
-	printf("%d", EXIT_SUCCESS);
-	exit(EXIT_SUCCESS);
+	char t = '1';
+	printf("%c\n%d\n", t, (int) t );
+	
+	
+	
+	int aa[2] = {1,2};
+	printf("%d\n%d\n", aa[0], aa[1]);
+	iii(aa);
+	printf("%d\n%d\n", aa[0], aa[1]);
+	
 	
 	int m[3][4] = { 1,1,1,1,
 					1,1,1,1,
