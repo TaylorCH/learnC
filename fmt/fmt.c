@@ -34,6 +34,6 @@ int main()
 		add_word(word);
 	}
 	
-	return 0;
+	return 0; 
 }
 

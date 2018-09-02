@@ -76,6 +76,6 @@ obj/*
 .vscode
 
 # dev C++
-.dev
-.layout
-.win
+*.dev
+*.layout
+*.win
