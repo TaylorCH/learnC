@@ -31,7 +31,7 @@ void add_word(const char *word)
 	num_words++;
 }
 
-int space_ramaining(void)
+int space_remaining(void)
 {
 	return MAX_LINE_LEN - line_len;
 }
