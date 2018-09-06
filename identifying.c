@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void iii(int a[])
+char *iii(void)
 {	
-	int t;
-	t = a[0];
-	a[0] = a[1];
-	a[1] = t;
+	char a='a', *p;
+	p = &a;
+	printf("%x\n", p);
+	return p;
+	
 }
 
 main()
@@ -15,27 +16,30 @@ main()
 	int i, j, k;
 	float ii;
 	char ch1, ch2;
-	
-	char t = '1';
-	printf("%c\n%d\n", t, (int) t );
-	
+	iii();
+
 	
 	
-	int aa[2] = {1,2};
-	printf("%d\n%d\n", aa[0], aa[1]);
-	iii(aa);
-	printf("%d\n%d\n", aa[0], aa[1]);
-	
-	
-	int m[3][4] = { 1,1,1,1,
-					1,1,1,1,
-					1,1,1,1 };
-	
-	
-	
-	
-	scanf("%c", &ch1);
-	printf("%d", (int) ch1);
+//	char t = '1';
+//	printf("%c\n%d\n", t, (int) t );
+//	
+//	
+//	
+//	int aa[2] = {1,2};
+//	printf("%d\n%d\n", aa[0], aa[1]);
+//	iii(aa);
+//	printf("%d\n%d\n", aa[0], aa[1]);
+//	
+//	
+//	int m[3][4] = { 1,1,1,1,
+//					1,1,1,1,
+//					1,1,1,1 };
+//	
+//	
+//	
+//	
+//	scanf("%c", &ch1);
+//	printf("%d", (int) ch1);
 	
 	
 	
