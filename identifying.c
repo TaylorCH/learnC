@@ -5,6 +5,7 @@
 #define r 2
 #define c 3
 
+
 int main() 
 {
 //	int r =2,c=3;
@@ -12,15 +13,24 @@ int main()
 					{4,5,6}};
 	int i, j, **p_trans;
 	
-	p_trans = malloc(sizeof(int *) * c);
-	
-	for (i = 0; i < r; i++) {
-		p_trans[i] = malloc(sizeof(int) * r);
-	}
-	
 	for (i = 0; i < r; i++) {
 		for (j = 0; j < c; j++){
-			p_trans[j][i] = p[i][j];
+			printf("%d ", p[i][j]);
+		}
+		printf("\n");
+	}
+	
+	p_trans = (int **)malloc(sizeof(int *) * c);
+	
+	
+	for (i = 0; i < c; i++) {
+		p_trans[i] = (int *)malloc(sizeof(int) * r);
+	}
+	
+	
+	for (i = 0; i < c; i++) {
+		for (j = 0; j < r; j++){
+			p_trans[i][j] = p[j][i];
 		}
 	}
 	
