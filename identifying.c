@@ -5,44 +5,56 @@
 #define r 2
 #define c 3
 
-
-int main() 
+int main()
 {
-//	int r =2,c=3;
-	int p[2][3] = { {1,2,3}, 
-					{4,5,6}};
-	int i, j, **p_trans;
+	int n = 0, m = 0;
+	int i ;
 	
-	for (i = 0; i < r; i++) {
-		for (j = 0; j < c; j++){
-			printf("%d ", p[i][j]);
-		}
-		printf("\n");
-	}
-	
-	p_trans = (int **)malloc(sizeof(int *) * c);
-	
-	
-	for (i = 0; i < c; i++) {
-		p_trans[i] = (int *)malloc(sizeof(int) * r);
-	}
-	
-	
-	for (i = 0; i < c; i++) {
-		for (j = 0; j < r; j++){
-			p_trans[i][j] = p[j][i];
-		}
-	}
-	
-	for (i = 0; i < c; i++) {
-		for (j = 0; j < r; j++) {
-			printf("%d ", p_trans[i][j]);
-		}
-		printf("\n");
-	}
-	
-	return 0;	
+	n = scanf("%d", &i) == EOF;
+	printf("%s", n);
+		
+	return 0;
 }
+
+
+
+//int main() 
+//{
+////	int r =2,c=3;
+//	int p[2][3] = { {1,2,3}, 
+//					{4,5,6}};
+//	int i, j, **p_trans;
+//	
+//	for (i = 0; i < r; i++) {
+//		for (j = 0; j < c; j++){
+//			printf("%d ", p[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	
+//	p_trans = (int **)malloc(sizeof(int *) * c);
+//	
+//	
+//	for (i = 0; i < c; i++) {
+//		p_trans[i] = (int *)malloc(sizeof(int) * r);
+//	}
+//	
+//	
+//	for (i = 0; i < c; i++) {
+//		for (j = 0; j < r; j++){
+//			p_trans[i][j] = p[j][i];
+//		}
+//	}
+//	
+//	for (i = 0; i < c; i++) {
+//		for (j = 0; j < r; j++) {
+//			printf("%d ", p_trans[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	
+//	return 0;	
+//}
 
 
 
